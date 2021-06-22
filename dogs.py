@@ -25,8 +25,8 @@ class Dog:
         self.medical = medical
 
 
-def createDoggos():
-    for x in range(5):
+def createDoggos(numDog):
+    for x in range(numDog):
         newDog = Dog(firstNames[random.randint(0, len(firstNames)-1)],
                      lastNames[random.randint(0, len(lastNames)-1)],
                      random.randint(5, 80),
@@ -83,5 +83,5 @@ def printDogList(dogs):
         return
 
 
-createDoggos()
+createDoggos(5)
 printDogList(dogList)
