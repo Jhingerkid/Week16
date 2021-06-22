@@ -27,13 +27,13 @@ class Dog:
 
 def createDoggos():
     for x in range(5):
-        newDog = Dog(firstNames[random.randint(0, 7)],
-                     lastNames[random.randint(0, 5)],
+        newDog = Dog(firstNames[random.randint(0, len(firstNames)-1)],
+                     lastNames[random.randint(0, len(lastNames)-1)],
                      random.randint(5, 80),
-                     breeds[random.randint(0, 7)],
+                     breeds[random.randint(0, len(breeds)-1)],
                      random.randint(1, 10),
-                     colors[random.randint(0, 5)],
-                     conditions[random.randint(0, 6)])
+                     colors[random.randint(0, len(colors)-1)],
+                     conditions[random.randint(0, len(conditions)-1)])
         dogList.append(newDog)
 
 
@@ -52,13 +52,13 @@ def showDogInfo(dogNumber):
 
 
 def addDog():
-    prop1 = askQuestion("First name?")
-    prop2 = askQuestion("Last name?")
-    prop3 = int(askQuestion("Weight?"))
-    prop4 = askQuestion("Breed?")
-    prop5 = int(askQuestion("Age?"))
-    prop6 = askQuestion("Color?")
-    prop7 = askQuestion("Reason for visit?")
+    prop1 = askQuestion("First name?\n")
+    prop2 = askQuestion("Last name?\n")
+    prop3 = int(askQuestion("Weight?\n"))
+    prop4 = askQuestion("Breed?\n")
+    prop5 = int(askQuestion("Age?\n"))
+    prop6 = askQuestion("Color?\n")
+    prop7 = askQuestion("Reason for visit?\n")
     newDoge = Dog(prop1, prop2, prop3, prop4, prop5, prop6, prop7)
     dogList.append(newDoge)
     printDogList(dogList)
